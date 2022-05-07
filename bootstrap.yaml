@@ -1,0 +1,19 @@
+BoxFeature: 7
+ScoreThreshold: 0.01
+NmsOverlapThreshold: 0.1
+UseOnnx: False 
+
+PfeOnnx: /home/yexiubo/project/PointPillars_mmdet_dv/model/voxnet_pfn_ori.onnx
+BackboneOnnx: /home/yexiubo/project/PointPillars_mmdet_secfpn/model/pts_backbone_ori.onnx
+
+# PfeTrt: /home/yexiubo/project/PointPillars_mmdet_secfpn/model/pts_vfe_ori.trt
+PfeTrt: /home/yexiubo/project/PointPillars_mmdet_dv/model/voxnet_pfn_ori.onnx
+BackboneTrt: /home/yexiubo/project/PointPillars_mmdet_dv/model/voxnet_backbone_ori.trt
+
+ModelConfig: ../pointpillars/cfgs/hv_pointpillars_secfpn_sbn-all_4x8_2x_nus-3d.yaml
+AnchorFile: ../pointpillars/cfgs/generate_anchors_400x400.txt
+
+InputFile: ../test/testdata/1645179542771259609.bin
+# InputFile: ../test/testdata/000000.bin
+# OutputFile: ../test/testdata/boxes_onnx.txt
+OutputFile: ../test/testdata/boxes.txt

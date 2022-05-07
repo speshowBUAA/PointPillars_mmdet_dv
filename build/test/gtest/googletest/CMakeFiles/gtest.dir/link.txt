@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC  -DYAML_BUILD_SHARED_LIBS=ON -D_MWAITXINTRIN_H_INCLUDED -D_FORCE_INLINES  -O3 -DNDEBUG  -shared -Wl,-soname,libgtest.so.1.10.0 -o ../../../lib/libgtest.so.1.10.0 CMakeFiles/gtest.dir/src/gtest-all.cc.o  -lpthread 
